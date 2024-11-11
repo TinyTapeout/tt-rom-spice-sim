@@ -10,7 +10,7 @@ on:
 
 jobs:
   dump_rom:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     env:
       PDK_ROOT: '${{ github.workspace }}/pdk'
       PDK_VERSION: 'bdc9412b3e468c102d01b7cf6337be06ec6e9c9a'
