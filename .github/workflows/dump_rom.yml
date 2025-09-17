@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-22.04
     env:
       PDK_ROOT: '${{ github.workspace }}/pdk'
-      PDK_VERSION: 'bdc9412b3e468c102d01b7cf6337be06ec6e9c9a'
-      KLAYOUT_VERSION: '0.28.17'
-      MAGIC_VERSION: '8.3.460'
-      NGSPICE_VERSION: '42'
+      PDK_VERSION: '426f95115110d6d0185f1ba3d09b3aa8a014969b'
+      KLAYOUT_VERSION: '0.29.12'
+      MAGIC_VERSION: '8.3.551'
+      NGSPICE_VERSION: '45.2'
 
     steps:
       - name: Checkout repo
@@ -25,7 +25,7 @@ jobs:
           submodules: recursive
 
       - name: Install Sky130 PDK
-        uses: TinyTapeout/volare-action@v2
+        uses: TinyTapeout/ciel-action@v1
         with:
           pdk_name: sky130
           pdk_version: ${{ env.PDK_VERSION }}
